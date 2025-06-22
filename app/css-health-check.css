@@ -1,0 +1,24 @@
+/* CSS Health Check - This file can be used to validate CSS loading */
+
+/* Test import of main styles */
+@import './globals.css';
+
+/* Validation rules */
+body {
+  /* Ensure base styles are loaded */
+  font-family: var(--font-family, system-ui, sans-serif);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* Test Tailwind utilities */
+.test-utility {
+  @apply text-sm font-medium text-foreground;
+}
+
+/* Test custom CSS variables */
+.test-variables {
+  color: hsl(var(--primary));
+  background-color: hsl(var(--secondary));
+  border: 1px solid hsl(var(--border));
+}
