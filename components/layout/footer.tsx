@@ -12,7 +12,7 @@ export function Footer() {
             <p className="text-white/50 text-sm font-light tracking-wide mb-2">
               &copy; {new Date().getFullYear()} Reza Ramadhon. All rights reserved.
             </p>
-            <p className="text-white/40 text-xs font-light tracking-wide">Crafted with passion and precision</p>
+            <p className="text-white/80 text-xs font-light tracking-wide">Crafted with passion and precision</p>
           </div>
         </div>
       </div>

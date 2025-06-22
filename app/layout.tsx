@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Rz.',
   description: 'Created with Love',
   generator: 'reza',
+  
 }
 
 export default function RootLayout({

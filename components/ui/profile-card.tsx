@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { TiltedCard } from "./tilted-card"
 
 interface ProfileCardProps {
@@ -21,7 +22,9 @@ export function ProfileCard({ imageUrl, className = "" }: ProfileCardProps) {
         {/* Profile Image */}
         <div className="relative z-10">
           <div className="w-72 h-72 mx-auto rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
-            <img
+            <Image
+            width={0}
+            height={0}
               src="/images/profile.jpeg"
               alt="Reza Aditya - Full Stack Developer"
               className="w-full h-full object-cover"
