@@ -2,16 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
-  const hostname = request.headers.get('host')
+  const hostname = request.headers.get('host') || ''
 
-  // Only handle www redirect for non-static assets
-  if (hostname?.startsWith('www.') && !pathname.startsWith('/_next/')) {
-    const newUrl = new URL(request.url)
-    newUrl.hostname = hostname.replace('www.', '')
-    return NextResponse.redirect(newUrl, { status: 301 })
-  }
-
-  // Set MIME types for static CSS files
+  // Only handle CSS/JS MIME types - don't redirect at all
   if (pathname.startsWith('/_next/static/css/')) {
     const response = NextResponse.next()
     response.headers.set('Content-Type', 'text/css; charset=utf-8')
@@ -19,7 +12,6 @@ export function middleware(request: NextRequest) {
     return response
   }
 
-  // Set MIME types for static JS files
   if (pathname.startsWith('/_next/static/js/')) {
     const response = NextResponse.next()
     response.headers.set('Content-Type', 'application/javascript; charset=utf-8')
@@ -27,7 +19,7 @@ export function middleware(request: NextRequest) {
     return response
   }
 
-  // Add security headers to all other requests
+  // For all other requests, just add security headers - no redirects
   const response = NextResponse.next()
   response.headers.set('X-Content-Type-Options', 'nosniff')
   response.headers.set('X-Frame-Options', 'DENY')
@@ -39,9 +31,8 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Match all request paths except static files
+     * Only match static CSS and JS files for MIME type fixing
      */
-    '/((?!_next/static|_next/image|favicon.ico).*)',
     '/_next/static/css/:path*',
     '/_next/static/js/:path*',
   ],
