@@ -23,11 +23,16 @@ export function ProfileCard({ imageUrl, className = "" }: ProfileCardProps) {
         <div className="relative z-10">
           <div className="w-72 h-72 mx-auto rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
             <Image
-            width={0}
-            height={0}
+              width={288}
+              height={288}
               src="/images/profile.jpeg"
               alt="Reza Aditya - Full Stack Developer"
               className="w-full h-full object-cover"
+              priority={true}
+              quality={85}
+              sizes="288px"
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
             />
           </div>
         </div>

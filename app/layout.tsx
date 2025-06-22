@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import PerformanceMonitor from '@/components/performance-monitor'
 
 export const metadata: Metadata = {
   title: 'Rz.',
   description: 'Created with Love',
   generator: 'reza',
-  
+
 }
 
 export default function RootLayout({
@@ -15,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <PerformanceMonitor />
+        {children}
+      </body>
     </html>
   )
 }
