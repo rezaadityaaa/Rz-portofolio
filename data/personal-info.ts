@@ -4,7 +4,7 @@ export const personalInfo: PersonalInfo = {
   name: "Reza Aditya",
   title: "Full Stack Developer & Software Engineer",
   description:
-    "Reza Aditya adalah Full Stack Developer berpengalaman yang berspesialisasi dalam Laravel, Next.js, Vue.js, dan teknologi web modern. Passionate about creating beautiful, functional, and user-centered digital experiences.",
+    ". Passionate about creating beautiful, functional, and user-centered digital experiences.",
   stats: {
     projects: 50,
     experience: 5,
