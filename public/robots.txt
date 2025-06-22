@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://rezaditya.me/sitemap.xml
+
+# Disallow admin or private pages (if any)
+# Disallow: /admin
+# Disallow: /private
+
+# Allow all images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Specific instructions for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
