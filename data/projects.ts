@@ -2,22 +2,22 @@ import type { Project } from "@/types"
 
 export const projects: Project[] = [
   {
-    id: "ecommerce",
-    title: "E-commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration",
-    technologies: ["React", "Node.js", "MongoDB"],
+    id: "education",
+    title: "Education Platform",
+    description: "Full-stack education platform for SD N 1 Padangsari",
+    technologies: ["laravel", "Livewire", "Fillament","SQlite","TailwindCSS"],
     emoji: "",
     gradient: "from-blue-600 to-purple-600",
-    image: "/images/profile.jpeg",
+    image: "/images/sd-padangsari.png",
   },
   {
-    id: "task-management",
-    title: "Task Management App",
-    description: "Collaborative project management tool with real-time updates",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL"],
+    id: "e-commerce",
+    title: "E-commerce Platform",
+    description: "Full-stack E-commerce Platform for Why Coffee",
+    technologies: ["Laravel", "TailwindCSS", "SQlite"],
     emoji: "",
     gradient: "from-green-600 to-teal-600",
-    image: "/placeholder.jpg",
+    image: "/images/whytrack.png",
   },
   {
     id: "weather-dashboard",
