@@ -125,22 +125,6 @@ const nextConfig = {
       },
     ];
   },
-  // Redirects for www subdomain
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.rezaditya.me',
-          },
-        ],
-        destination: 'https://rezaditya.me/:path*',
-        permanent: true,
-      },
-    ];
-  },
 }
 
 export default withBundleAnalyzer(nextConfig);
