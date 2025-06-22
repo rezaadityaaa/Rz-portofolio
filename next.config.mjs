@@ -68,7 +68,7 @@ const nextConfig = {
 
     return config;
   },
-  // Headers for better caching
+  // Headers for better caching and MIME types
   async headers() {
     return [
       {
@@ -96,6 +96,48 @@ const nextConfig = {
             value: 'public, max-age=31536000, immutable',
           },
         ],
+      },
+      {
+        source: '/_next/static/css/(.*)',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/css',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/js/(.*)',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/javascript',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
+  // Redirects for www subdomain
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.rezaditya.me',
+          },
+        ],
+        destination: 'https://rezaditya.me/:path*',
+        permanent: true,
       },
     ];
   },

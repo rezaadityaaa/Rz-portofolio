@@ -81,9 +81,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="id">
-      <body className='overscroll-none'>
-        
+    <html lang="id" suppressHydrationWarning>
+      <body className="overscroll-none min-h-screen bg-background font-sans antialiased">
         <StructuredData />
         <PerformanceMonitor />
         {children}
