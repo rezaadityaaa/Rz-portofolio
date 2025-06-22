@@ -1,11 +1,9 @@
-const CACHE_NAME = 'rz-porto-v1';
+const CACHE_NAME = 'rz-porto-v2';
 const urlsToCache = [
   '/',
   '/images/profile.jpeg',
   '/images/sd-padangsari.png',
   '/images/whytrack.png',
-  '/_next/static/css/',
-  '/_next/static/js/',
 ];
 
 self.addEventListener('install', (event) => {

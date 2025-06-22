@@ -7,7 +7,7 @@ import StructuredData from '@/components/structured-data'
 export const metadata: Metadata = {
   metadataBase: new URL('https://rezaditya.me'),
   title: {
-    default: 'Reza Aditya - Full Stack Developer | Portfolio',
+    default: 'Reza Aditya - Web Developer | Portfolio',
     template: '%s | Reza Aditya'
   },
   description: 'Reza Aditya adalah Full Stack Developer yang berpengalaman dalam Laravel, Next.js, dan Vue.js. Lihat portfolio dan proyek-proyek terbaik saya.',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'Reza Aditya Portfolio',
     images: [
       {
-        url: '/images/profile.jpeg',
+        url: '/images/optimized/profile-optimized.jpg',
         width: 1200,
         height: 630,
         alt: 'Reza Aditya - Full Stack Developer',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Reza Aditya - Full Stack Developer',
     description: 'Portfolio profesional Reza Aditya sebagai Full Stack Developer',
-    images: ['/images/profile.jpeg'],
+    images: ['/images/optimized/profile-optimized.jpg'],
     creator: '@rezaaditya',
   },
   verification: {

@@ -29,6 +29,22 @@ export function OptimizedImage({
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
+  // Get optimized image path
+  const getOptimizedSrc = (originalSrc: string) => {
+    if (originalSrc.startsWith('/images/') && !originalSrc.includes('optimized')) {
+      const filename = originalSrc.replace('/images/', '').replace(/\.(jpg|jpeg|png|webp)$/i, '');
+      
+      if (originalSrc.includes('.jpg') || originalSrc.includes('.jpeg')) {
+        return `/images/optimized/${filename}-optimized.jpg`;
+      } else if (originalSrc.includes('.png')) {
+        return `/images/optimized/${filename}-optimized.png`;
+      }
+    }
+    return originalSrc;
+  };
+
+  const optimizedSrc = hasError ? src : getOptimizedSrc(src);
+
   // Generate optimized sizes based on common breakpoints
   const defaultSizes = sizes || generateImageSizes();
 
@@ -49,7 +65,7 @@ export function OptimizedImage({
         <div className="absolute inset-0 bg-gray-200 dark:bg-gray-800 animate-pulse" />
       )}
       <Image
-        src={src}
+        src={optimizedSrc}
         alt={alt}
         width={width}
         height={height}
