@@ -25,14 +25,14 @@ export function ProfileCard({ imageUrl, className = "" }: ProfileCardProps) {
             <Image
               width={288}
               height={288}
-              src="/images/profile.jpeg"
-              alt="Reza Aditya - Full Stack Developer"
+              src={`/images/profile.webp?v=${Date.now()}`}
+              alt="Reza Aditya - Web Developer"
               className="w-full h-full object-cover"
               priority={true}
               quality={85}
               sizes="288px"
               placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+              blurDataURL="data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAAAAAAfQ//73v/+BiOh/AAA="
             />
           </div>
         </div>

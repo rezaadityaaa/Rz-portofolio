@@ -17,9 +17,10 @@ export function PerformanceMonitor() {
         });
     }
 
-    // Preload critical resources
+    // Preload critical resources with cache busting
+    const CACHE_BUSTER = Date.now();
     const preloadLinks = [
-      { href: '/images/profile.jpeg', as: 'image' },
+      { href: `/images/profile.webp?v=${CACHE_BUSTER}`, as: 'image' },
       { href: '/_next/static/css/', as: 'style' },
     ];
 

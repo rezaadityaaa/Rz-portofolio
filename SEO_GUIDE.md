@@ -87,10 +87,10 @@ Update link social media di structured data:
 - "Reza Aditya"
 - "Reza Developer"
 - "rezaditya.me"
-- "Full Stack Developer Reza"
+- "Web Developer Reza"
 
 ### **Secondary Keywords:**
-- "Full Stack Developer Indonesia"
+- "Web Developer Indonesia"
 - "Laravel Developer Indonesia"
 - "Next.js Developer Indonesia"
 - "Vue.js Developer"
@@ -142,7 +142,7 @@ Update link social media di structured data:
 
 ### **Month 3-6:**
 - Established presence untuk professional keywords
-- Kompetitif untuk "Full Stack Developer Indonesia"
+- Kompetitif untuk "Web Developer Indonesia"
 
 ---
 

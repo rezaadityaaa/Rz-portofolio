@@ -6,8 +6,8 @@ export const SITE_CONFIG = {
   
   // Personal information
   name: 'Reza Aditya',
-  title: 'Full Stack Developer',
-  description: 'Full Stack Developer yang berpengalaman dalam Laravel, Next.js, dan Vue.js',
+  title: 'Web Developer',
+  description: 'Web Developer yang berpengalaman dalam Laravel, Next.js, dan Vue.js',
   
   // Social media profiles
   social: {
@@ -22,7 +22,7 @@ export const SITE_CONFIG = {
     'Reza Aditya',
     'Reza',
     'rezaditya.me',
-    'Full Stack Developer',
+    'Web Developer',
     'Web Developer',
     'Laravel Developer',
     'Next.js Developer',
@@ -34,8 +34,8 @@ export const SITE_CONFIG = {
     'Programmer Indonesia'
   ],
   
-  // Open Graph image
-  ogImage: '/images/profile.jpeg',
+  // Open Graph image with cache busting
+  ogImage: `/images/profile.webp?v=${Date.now()}`,
   
   // Google verification (to be updated after setup)
   googleVerification: 'your-google-verification-code',

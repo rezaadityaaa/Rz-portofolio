@@ -3,22 +3,23 @@
 import Script from 'next/script';
 
 export function StructuredData() {
+  const CACHE_BUSTER = Date.now();
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Reza Aditya",
     "alternateName": ["Reza", "Reza Developer", "rezaditya"],
-    "jobTitle": "Full Stack Developer",
-    "description": "Full Stack Developer yang berpengalaman dalam Laravel, Next.js, dan Vue.js",
+    "jobTitle": "Web Developer",
+    "description": "Web Developer yang berpengalaman dalam Laravel, Next.js, dan Vue.js",
     "url": "https://rezaditya.me",
-    "image": "https://rezaditya.me/images/profile.jpeg",
+    "image": `https://rezaditya.me/images/profile.webp?v=${CACHE_BUSTER}`,
     "sameAs": [
       "https://github.com/rezaaditya",
       "https://linkedin.com/in/rezaaditya", 
       "https://twitter.com/rezaaditya"
     ],
     "knowsAbout": [
-      "Full Stack Development",
+      "Web Development",
       "Laravel",
       "Next.js",
       "Vue.js",

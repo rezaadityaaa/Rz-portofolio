@@ -1,7 +1,8 @@
-const CACHE_NAME = 'rz-porto-v2';
+const CACHE_NAME = 'rz-porto-v3'; // Updated version to force cache refresh
+const PROFILE_IMAGE_VERSION = Date.now();
 const urlsToCache = [
   '/',
-  '/images/profile.jpeg',
+  `/images/profile.webp?v=${PROFILE_IMAGE_VERSION}`,
   '/images/sd-padangsari.png',
   '/images/whytrack.png',
 ];
@@ -12,6 +13,29 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         return cache.addAll(urlsToCache);
       })
+      .then(() => {
+        // Force service worker to activate immediately
+        self.skipWaiting();
+      })
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          // Delete old caches, especially profile image cache
+          if (cacheName !== CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => {
+      // Take control of all pages immediately
+      return self.clients.claim();
+    })
   );
 });
 

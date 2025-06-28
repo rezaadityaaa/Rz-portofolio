@@ -1,7 +1,5 @@
 export const developerRoles = [
-  "Full Stack Web Developer",
-  "Frontend Developer",
-  "Backend Developer",
+  "Web Developer",
   "Promp Engineer",
   "React Developer",
   "Laravel Developer",
